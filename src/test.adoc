@@ -1,0 +1,106 @@
+= AsciiDoctor Syntax Demo
+Author Name
+2025-04-17
+:toc:
+:icons: font
+:source-highlighter: rouge
+:imagesdir: images
+:example-caption!:
+
+== Section One: Inline Formatting
+
+This is *bold*, _italic_, *_bold italic_*, `monospace`, and `+literal+` text.
+
+Link to https://asciidoctor.org[AsciiDoctor].
+
+Footnote example.footnote:[This is a footnote.]
+
+== Section Two: Lists
+
+=== Unordered
+
+* Item A
+* Item B
+** Subitem B.1
+** Subitem B.2
+* Item C
+
+=== Ordered
+
+. First
+. Second
+.. Substep
+. Third
+
+=== Description
+
+term 1:: description 1
+term 2:: description 2
+
+== Section Three: Quotes and Verses
+
+[quote, Albert Einstein]
+____
+Imagination is more important than knowledge.
+____
+
+[verse, Robert Frost, The Road Not Taken]
+____
+Two roads diverged in a yellow wood,  
+And sorry I could not travel both...
+____
+
+== Section Four: Code Blocks
+
+[source,java]
+----
+public class Hello {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!");
+  }
+}
+----
+
+[source,python]
+----
+def greet():
+    print("Hello from Python")
+----
+
+== Section Five: Tables
+
+[cols="1,2,3", options="header"]
+|===
+|Name |Age |Role
+|Alice |30 |Engineer
+|Bob |40 |Manager
+|Carol |25 |Designer
+|===
+
+== Section Six: Images and Icons
+
+image::logo.png[AsciiDoctor Logo,200,200]
+
+icon:rocket[] icon:heart[]
+
+== Section Seven: Admonitions
+
+NOTE: This is a note.
+
+TIP: This is a tip.
+
+IMPORTANT: Pay attention here.
+
+WARNING: Something might go wrong.
+
+CAUTION: This is risky.
+
+== Section Eight: Blocks
+
+[example]
+====
+This is an example block.
+====
+
+[sidebar]
+.This is a sidebar
