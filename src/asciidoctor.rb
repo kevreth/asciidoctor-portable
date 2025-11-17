@@ -2,11 +2,20 @@
 require 'asciidoctor'
 require 'asciidoctor-html5s'
 
-input = ARGV[0] or abort("Usage: ./asciidoctor input.adoc")
-html = Asciidoctor.convert_file input,
-  safe: :safe,
-  backend: 'html5s',
-  header_footer: false,
-  to_file: false,
-  attributes: { 'showtitle' => true }
+if ARGV[0]
+  html = Asciidoctor.convert_file ARGV[0],
+    safe: :safe,
+    backend: 'html5s',
+    header_footer: false,
+    to_file: false,
+    attributes: { 'showtitle' => true }
+else
+  input = STDIN.read
+  html = Asciidoctor.convert input,
+    safe: :safe,
+    backend: 'html5s',
+    header_footer: false,
+    to_file: false,
+    attributes: { 'showtitle' => true }
+end
 puts html
