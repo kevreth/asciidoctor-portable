@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-sudo apt install makeself
 # Define working directory
 DIR="$(cd "$(dirname "$0")" && pwd)"
 mkdir -p build
