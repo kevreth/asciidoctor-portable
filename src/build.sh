@@ -14,7 +14,7 @@ mv ruby-install-0.10.1 ruby-install
 ruby-install/bin/ruby-install --rubies-dir rubies ruby 3.4.3
 
 # Export local Ruby to PATH
-export PATH="build/ruby/bin:$PATH"
+export PATH="$DIR/build/rubies/ruby-3.4.3/bin:$PATH"
 echo $PATH
 
 # Install gems locally
